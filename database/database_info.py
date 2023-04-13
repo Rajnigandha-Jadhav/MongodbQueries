@@ -11,6 +11,7 @@ print(MONGODB_URI)
 DB_NAME = os.environ.get('DATABASE_NAME')
 Customers = os.environ.get('COLLECTION_NAME_Customers')
 Pizza = os.environ.get('COLLECTION_NAME_pizza')
+Queries = os.environ.get('COLLECTION_NAME_Query')
 
 
 
@@ -18,6 +19,7 @@ client = MongoClient(MONGODB_URI)
 db = client[DB_NAME]
 customers = db.Customers
 pizza = db.Pizza
+queries = db.Queries
 
 
 

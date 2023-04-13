@@ -10,9 +10,14 @@ class Customer(JSONSerializable):
     orderQuantity: int
 
 @dataclass
-class Pizza(JSONSerializable):
+class Topping:
+    name: str
+    quantity: int
+
+@dataclass
+class Pizza:
     pizzaName: str
     size: List[str]
     price: int
-   
+    toppings: List[Topping]
 
